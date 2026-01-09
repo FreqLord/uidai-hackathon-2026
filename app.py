@@ -22,11 +22,11 @@ st.markdown("""
 # ==========================================
 @st.cache_data
 def load_master_data():
-    # Load the clean data you created
-    df = pd.read_csv('master_uidai_data_cleaned.csv')
+    # UPDATED: Load the demo data instead of the master file
+    df = pd.read_csv('uidai_demo_data.csv') 
     df['date'] = pd.to_datetime(df['date'])
     return df
-
+    
 @st.cache_data
 def load_forecast_data():
     # Load the AI predictions
